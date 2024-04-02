@@ -1,0 +1,70 @@
+.hero {
+  &__inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    align-items: center;
+  }
+
+  &__title {
+    font-size: 50px;
+    line-height: 70px;
+  }
+
+  .title-peace {
+    @include bold-font;
+  }
+
+  &__desc {
+    @include medium-font;
+    color: $text-color;
+    line-height: 30px;
+    margin-bottom: 50px;
+  }
+
+  &__btn {
+    @include button(17px, 77px, 10px, $main-button-color);
+    color: $icon-bg-color;
+    box-shadow: 5px 25px 40px 10px#f538385c;
+
+    &:hover {
+      transform: translateY(10px);
+      box-shadow: 5px 25px 20px 0px#f538385c;
+    }
+  }
+
+  &__infos {
+    margin-top: 102px;
+    padding-block: 37px;
+    padding-inline: 91px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 20px 200px 0px;
+  }
+
+  &__card {
+    display: flex;
+    align-items: center;
+    gap: 36.5px;
+    padding-block: 20px;
+
+    &:not(:last-child) {
+      border-right: 2px solid #eeeff2;
+      padding-right: 130px;
+    }
+  }
+
+  &__card-image {
+    width: 55px;
+  }
+  &__card-title {
+    @include bold-font;
+    margin-bottom: 5px;
+  }
+
+  &__card-text {
+    color: $text-color;
+  }
+}

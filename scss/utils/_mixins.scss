@@ -1,0 +1,31 @@
+@mixin medium-font {
+  font-family: "Rubik-Medium", "Arial", sans-serif;
+}
+
+@mixin bold-font {
+  font-family: "Rubik-Bold";
+}
+
+@mixin list-unstiled {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+@mixin button($padding-block, $padding-inline, $border-radius, $background) {
+  padding-block: $padding-block;
+  padding-inline: $padding-inline;
+  background-color: $background;
+  border-radius: $border-radius;
+  border: transparent;
+  border: 2px solid $main-button-color;
+  @include medium-font;
+  color: $main-button-color;
+  transition: ease-out 0.3s;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $main-button-color;
+    color: $icon-bg-color;
+  }
+}

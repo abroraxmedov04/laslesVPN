@@ -1,0 +1,52 @@
+.features {
+  margin-top: 60px;
+  padding-bottom: 131px;
+
+  &__inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 169px;
+    align-items: center;
+  }
+
+  &__title {
+    @include medium-font;
+    font-size: 35px;
+    line-height: 50px;
+    margin-bottom: 20px;
+  }
+
+  &__content {
+    padding-top: 60px;
+  }
+
+  &__image {
+    width: 508px;
+    height: 414px;
+  }
+
+  &__desc {
+    font-size: 16px;
+    line-height: 30px;
+    color: $text-color;
+    margin-bottom: 20px;
+  }
+
+  &__item {
+    margin-bottom: 20px;
+    color: $text-color;
+    line-height: 30px;
+    position: relative;
+    padding-left: 30px;
+
+    &::before {
+      content: "";
+      background-image: url("../../assets/icons/gree-correct-icon.png");
+      position: absolute;
+      width: 24px;
+      height: 24px;
+      top: 2px;
+      left: 0;
+    }
+  }
+}

@@ -1,0 +1,144 @@
+.trusted {
+  background-color: #fbfbfb;
+  position: relative;
+  padding-top: 50px;
+
+  &__title {
+    text-align: center;
+    font-size: 35px;
+    line-height: 50px;
+    color: $text-black-color;
+    margin-bottom: 20px;
+  }
+
+  &__desc {
+    text-align: center;
+    color: $text-color;
+    line-height: 30px;
+    margin-bottom: 60px;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    gap: 50px;
+    justify-content: left;
+  }
+
+  &__card {
+    padding-block: 30px;
+    padding-inline: 30px;
+    border: 2px solid $card-border;
+    border-radius: 10px;
+    transition: ease-in-out 0.3s;
+    max-height: 230px;
+    height: 100%;
+    width: 400px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+    &:hover {
+      border-color: $main-button-color;
+    }
+  }
+
+  &__card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__card-personprofile-left-side {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  &__card-image {
+    width: 50px;
+    height: 50px;
+  }
+
+  &__card-desc {
+    color: $text-black-color;
+    margin-top: 20px;
+    line-height: 20px;
+  }
+
+  .person-name {
+    color: $text-black-color;
+    @include medium-font;
+    margin-bottom: 5px;
+  }
+
+  &__rating-text {
+    color: $text-black-color;
+    position: relative;
+
+    &::after {
+      content: "";
+      background-image: url("../../assets/icons/star-icon.svg");
+      position: absolute;
+      width: 16px;
+      height: 16px;
+    }
+  }
+
+  &__card-functionality {
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__functionality-circles {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+
+  &__functionality-circles-block #arrow-icons {
+    width: 60px;
+    height: 60px;
+    border: 2px solid $main-button-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    transition: ease-in-out 0.4s;
+    color: $main-button-color;
+
+    &:hover {
+      background-color: $main-button-color;
+      color: $icon-bg-color;
+    }
+  }
+}
+
+.subscribe {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transform: translateY(120px);
+  padding-block: 58px;
+  padding-inline: 70px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  background: #ffffff;
+}
+.subscribe__title {
+  width: 351px;
+  margin: 0 auto;
+  font-size: 35px;
+  font-weight: 600;
+  line-height: 45px;
+}
+.subscribe__paragrph {
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 30px;
+}
+.subscribe__btn {
+  @include button(17px, 65px, 10px, transparent);
+  color: $main-button-color;
+}

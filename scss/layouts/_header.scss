@@ -1,0 +1,39 @@
+.header {
+  position: relative;
+
+  &__inner {
+    padding-block: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .navbar__list {
+    display: flex;
+    gap: 40px;
+  }
+
+  .navbar__link {
+    color: $text-color;
+    transition: ease-out 0.3s;
+
+    &:hover {
+      color: $text-black-color;
+      @include medium-font;
+    }
+  }
+  .buttons {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+
+    &__sign-in {
+      @include medium-font;
+      cursor: pointer;
+    }
+
+    &__sign-up {
+      @include button(13px, 45px, 100px, transparent);
+    }
+  }
+}
